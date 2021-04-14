@@ -5,6 +5,7 @@ WORKDIR /app
 COPY data /app/data
 COPY boot/keystore /app/boot/keystore
 COPY boot.sh /app/
-EXPOSE 3000/tcp 3000/udp
+COPY boot.key /app/
+EXPOSE 30303/tcp 30303/udp
 EXPOSE 8000/tcp
 CMD ./boot.sh
